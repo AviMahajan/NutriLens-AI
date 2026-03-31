@@ -151,7 +151,7 @@ export default function App() {
 
     try {
       const base64Data = image.split(',')[1];
-      const model = "gemini-1.5-flash";
+      const model = "Gemini 2.5 Flash-Lite";
 
       const prompt = `You are an AI-powered nutrition analysis assistant embedded inside a web application called "NutriLens AI".
 Analyze the food image and generate structured nutritional insights.
