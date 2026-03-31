@@ -151,7 +151,7 @@ export default function App() {
 
     try {
       const base64Data = image.split(',')[1];
-      const model = "Gemini 2.5 Flash-Lite";
+      const model = "gemini-3-flash-preview";
 
       const prompt = `You are an AI-powered nutrition analysis assistant embedded inside a web application called "NutriLens AI".
 Analyze the food image and generate structured nutritional insights.
@@ -311,7 +311,7 @@ OUTPUT FORMAT (STRICT):
                   className="inline-flex items-center gap-2 px-3 py-1 bg-white/10 text-white rounded-full text-xs font-bold uppercase tracking-wider border border-white/20 backdrop-blur-md"
                 >
                   <Zap className="w-3 h-3" />
-                  Powered by Gemini 3.1
+                  Powered by Gemini 3 Flash
                 </motion.div>
                 <motion.h2 
                   initial={{ opacity: 0, y: 20 }}
