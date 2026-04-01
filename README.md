@@ -101,7 +101,9 @@ Planned enhancements to evolve from prototype → product:
 
 ## 📸 Screenshots
 
-_Add screenshots or GIFs here_
+![LP new](https://github.com/user-attachments/assets/01ae4e7e-40d4-4d10-93d1-88dac5cce2fc)
+
+![analysis New](https://github.com/user-attachments/assets/d6b47dcf-653f-423d-b364-6654c3e69e55)
 
 ---
 
