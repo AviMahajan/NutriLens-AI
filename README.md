@@ -1,44 +1,118 @@
-# NutriScan AI - Vercel Deployment Guide
+# 🥗 NutriLens AI — Food Nutrition Analyzer
 
-This project is optimized for deployment on [Vercel](https://vercel.com). Follow these steps to deploy your application:
+NutriLens AI is an AI-powered prototype that analyzes food images and provides instant nutrition insights — including calories, macros, and dietary assessment.
 
-## 1. Prerequisites
+> 📸 Snap your meal → ⚡ Get insights → 📊 No manual logging
 
-- A [Vercel account](https://vercel.com/signup).
-- [Vercel CLI](https://vercel.com/download) (optional, but recommended for local testing).
-- A [Gemini API Key](https://aistudio.google.com/app/apikey).
+---
 
-## 2. Deployment Steps
+## 🎯 Problem
 
-### Option A: Via Vercel Dashboard (Recommended)
+Most calorie tracking apps are **high-friction**:
+- Manual food logging is tedious  
+- Portion estimation is difficult  
+- Searching food databases is time-consuming  
 
-1. **Push your code to GitHub/GitLab/Bitbucket.**
-2. **Import the project in Vercel:**
-   - Go to the [Vercel Dashboard](https://vercel.com/dashboard).
-   - Click **"New Project"**.
-   - Select your repository.
-3. **Configure the project:**
-   - **Framework Preset:** Vercel should automatically detect **Vite**.
-   - **Build Command:** `npm run build`
-   - **Output Directory:** `dist`
-4. **Set Environment Variables:**
-   - In the **"Environment Variables"** section, add:
-     - `GEMINI_API_KEY`: Your Google Gemini API Key.
-5. **Click "Deploy".**
+This leads to **low consistency and high drop-off**.
 
-### Option B: Via Vercel CLI
+---
 
-1. Install the Vercel CLI: `npm i -g vercel`
-2. Run `vercel` in the project root.
-3. Follow the prompts to link your project.
-4. Set the environment variable: `vercel env add GEMINI_API_KEY`
-5. Deploy: `vercel --prod`
+## 💡 Solution
 
-## 3. Configuration Details
+NutriLens AI removes friction by enabling:
 
-- **`vercel.json`**: Handles client-side routing by rewriting all non-asset requests to `index.html`.
-- **`vite.config.ts`**: Injects the `GEMINI_API_KEY` into the client-side bundle at build time.
+- 📷 Image-based food input (natural interaction)
+- ⚡ Instant AI-powered analysis  
+- 📊 Structured nutrition insights  
 
-## 4. Important Note on API Keys
+No typing. No searching. Just upload and know.
 
-The current setup injects the `GEMINI_API_KEY` into the client-side bundle at build time for convenience. For production environments where security is paramount, consider moving the Gemini API calls to a serverless function (Vercel Functions) to keep your API key hidden from the browser.
+---
+
+## ✨ Features
+
+- 🍽 **Food Detection** — Identifies food items from images  
+- 🔥 **Calorie Estimation** — Approximate calorie count  
+- 🥩 **Macronutrient Breakdown** — Protein, carbs, fats  
+- 🧠 **Health Assessment** — Healthy / Moderate / Unhealthy  
+- 🥗 **Diet Classification** — High protein, balanced, etc.  
+- 💡 **Smart Suggestions** — Actionable improvements  
+- 📊 **Confidence Score** — Transparency in AI predictions  
+
+---
+
+## 🧠 Product Thinking (AI PM Lens)
+
+This project focuses on **real-world AI product trade-offs**:
+
+- **Speed over perfection** → Fast responses improve usability  
+- **Structured outputs** → AI responses formatted into usable data  
+- **Trust through transparency** → Confidence levels + assumptions  
+- **Low-friction UX** → Designed for habit formation  
+
+---
+
+## ⚠️ Limitations
+
+- Estimates are **approximate, not exact**  
+- Accuracy depends on image quality  
+- Complex/mixed dishes may reduce precision  
+
+> This is a prototype and not intended for medical or dietary advice.
+
+---
+
+## 🛠 Tech Stack
+
+- **AI Model:** Google Gemini (via Google AI Studio)  
+- **Frontend:** React + Vite  
+- **Deployment:** Vercel  
+- **Language:** TypeScript  
+
+---
+
+## ⚙️ How It Works
+
+1. User uploads a food image  
+2. Image is processed via Gemini API  
+3. Prompt engineering structures the response  
+4. Output is formatted into UI-friendly insights  
+
+---
+
+## 🔐 Security & Cost Considerations
+
+- API keys are managed via environment variables  
+- Usage is controlled using quota limits  
+- Designed for demo-scale usage (not production)  
+
+---
+
+## 🚀 Future Roadmap
+
+Planned enhancements to evolve from prototype → product:
+
+- 📅 Daily / weekly / monthly tracking  
+- 👤 User profiles & personalized goals  
+- 📊 Historical analytics  
+- 🧠 Context-aware memory (meal patterns)  
+
+---
+
+## 📸 Screenshots
+
+_Add screenshots or GIFs here_
+
+---
+
+## 🧪 Setup Instructions
+
+```bash
+# Clone the repo
+git clone https://github.com/your-username/nutrilens-ai.git
+
+# Install dependencies
+npm install
+
+# Run locally
+npm run dev
